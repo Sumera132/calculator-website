@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blue Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-blue-100 min-h-screen flex items-center justify-center">
+
+  <div class="calculator bg-white w-80 p-5 rounded-2xl shadow-xl">
+
+    <!-- Display -->
+    <input
+      id="display"
+      type="text"
+      readonly
+      value="0"
+      class="w-full mb-4 p-3 text-right text-2xl rounded-lg bg-blue-50 border border-blue-300 focus:outline-none"
+    />
+
+    <!-- Buttons -->
+    <div class="grid grid-cols-4 gap-3">
+
+      <button onclick="clearDisplay()" class="col-span-2 btn-clear">C</button>
+      <button onclick="deleteLast()" class="btn-operator">⌫</button>
+      <button onclick="appendValue('/')" class="btn-operator">÷</button>
+
+      <button onclick="appendValue('7')" class="btn-number">7</button>
+      <button onclick="appendValue('8')" class="btn-number">8</button>
+      <button onclick="appendValue('9')" class="btn-number">9</button>
+      <button onclick="appendValue('*')" class="btn-operator">×</button>
+
+      <button onclick="appendValue('4')" class="btn-number">4</button>
+      <button onclick="appendValue('5')" class="btn-number">5</button>
+      <button onclick="appendValue('6')" class="btn-number">6</button>
+      <button onclick="appendValue('-')" class="btn-operator">−</button>
+
+      <button onclick="appendValue('1')" class="btn-number">1</button>
+      <button onclick="appendValue('2')" class="btn-number">2</button>
+      <button onclick="appendValue('3')" class="btn-number">3</button>
+      <button onclick="appendValue('+')" class="btn-operator">+</button>
+
+      <!-- Percentage button -->
+      <button onclick="calculatePercentage()" class="btn-operator">%</button>
+
+      <button onclick="appendValue('0')" class="btn-number">0</button>
+      <button onclick="appendValue('.')" class="btn-number">.</button>
+      <button onclick="calculate()" class="btn-equal">=</button>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

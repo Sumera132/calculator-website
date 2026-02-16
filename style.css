@@ -1,0 +1,63 @@
+.calculator {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+button {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.92);
+}
+
+.btn-number {
+  background-color: #e0f2fe;
+  color: #1e3a8a;
+}
+
+.btn-number:hover {
+  background-color: #bae6fd;
+}
+
+.btn-operator {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-operator:hover {
+  background-color: #2563eb;
+}
+
+.btn-clear {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-clear:hover {
+  background-color: #dc2626;
+}
+
+.btn-equal {
+  background-color: #22c55e;
+  color: white;
+}
+
+.btn-equal:hover {
+  background-color: #16a34a;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
